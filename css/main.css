@@ -1,195 +1,26 @@
-/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-  display: block; }
-
-audio, canvas, video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-[hidden] {
-  display: none; }
-
-html {
-  font-size: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-html, button, input, select, textarea {
-  font-family: sans-serif; }
-
-body {
-  margin: 0; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:active, a:hover {
-  outline: 0; }
-
-h1 {
-  font-size: 2em;
-  margin: .67em 0; }
-
-h2 {
-  font-size: 1.5em;
-  margin: .83em 0; }
-
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0; }
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0; }
-
-h5 {
-  font-size: .83em;
-  margin: 1.67em 0; }
-
-h6 {
-  font-size: .67em;
-  margin: 2.33em 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b, strong {
-  font-weight: bold; }
-
-blockquote {
-  margin: 1em 40px; }
-
-dfn {
-  font-style: italic; }
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-p, pre {
-  margin: 1em 0; }
-
-code, kbd, pre, samp {
-  font-family: monospace,serif;
-  _font-family: 'courier new',monospace;
-  font-size: 1em; }
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-q {
-  quotes: none; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
-
-small {
-  font-size: 80%; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-dl, menu, ol, ul {
-  margin: 1em 0; }
-
-dd {
-  margin: 0 0 0 40px; }
-
-menu, ol, ul {
-  padding: 0 0 0 40px; }
-
-nav ul, nav ol {
-  list-style: none;
-  list-style-image: none; }
-
-img {
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-figure {
-  margin: 0; }
-
-form {
-  margin: 0; }
-
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: .35em .625em .75em; }
-
-legend {
-  border: 0;
-  padding: 0;
-  white-space: normal;
-  *margin-left: -7px; }
-
-button, input, select, textarea {
   font-size: 100%;
-  margin: 0;
+  font: inherit;
   vertical-align: baseline;
-  *vertical-align: middle; }
-
-button, input {
-  line-height: normal; }
-
-button, select {
-  text-transform: none; }
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-  *overflow: visible; }
-
-button[disabled], html input[disabled] {
-  cursor: default; }
-
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-  *height: 13px;
-  *width: 13px; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
+  margin: 0;
   padding: 0; }
 
-textarea {
-  overflow: auto;
-  vertical-align: top; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
 
 table {
   border-collapse: collapse;
@@ -198,6 +29,73 @@ table {
 /* ==========================================================================
    Ajinkya Borade
    ========================================================================== */
+body, html {
+  background-color: #333333;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: 'Lato', Tahoma, sans-serif; }
+
+.header,
+.footer,
+.main {
+  width: 960px;
+  margin: 0 auto; }
+
+.header {
+  height: 45px;
+  margin-bottom: 25px; }
+
+.main {
+  background-color: #edf2e9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.5); }
+  .main .top {
+    background-color: #89a740;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    -webkit-box-shadow: inset 1px 1px 1px #ccdca4;
+    -moz-box-shadow: inset 1px 1px 1px #ccdca4;
+    box-shadow: inset 1px 1px 1px #ccdca4;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8aa740), color-stop(0.94, #708a2f));
+    background-image: -o-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
+    background-image: -moz-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
+    background-image: -webkit-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
+    background-image: -ms-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
+    background-image: linear-gradient(to bottom, #8aa740 0%, #708a2f 94%); }
+
+ul.tab_links {
+  display: block; }
+  ul.tab_links li {
+    display: block;
+    float: left;
+    margin: 0 5px; }
+    ul.tab_links li a {
+      color: white;
+      text-shadow: -1.5px -1.5px 2px #89a740;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold; }
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

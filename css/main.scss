@@ -1,19 +1,116 @@
 @import "reset";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
+$whiteGreen : #edf2e9;
+$green : #89a740;
+
+@mixin background-clip($argument: padding-box) {
+  -moz-background-clip: $argument;
+  -webkit-background-clip: $argument;
+  background-clip: $argument;
+}
+
+@mixin rounded($round){
+  border-radius: $round;
+  -moz-border-radius: $round;
+  -webkit-border-radius: $round;
+}
+@mixin borderRadius($topleft: 0, $topright: 0, $bottomright: 0, $bottomleft: 0) {
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  border-top-left-radius: $topleft;
+
+}
+@mixin boxShadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
+  -webkit-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+  -moz-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+  box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+}
+@mixin innerShadow($horizontal:0, $vertical:1px, $blur:2px, $alpha: 0.4) {
+  -webkit-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+  -moz-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+  box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+}
+@mixin textInnerShadow($color1,$color2){
+  text-shadow: 1px 4px 6px $color1, 0 0 0 $color2, 1px 4px 6px $color1;
+}
 /* ==========================================================================
    Ajinkya Borade
    ========================================================================== */
+body, html {
+  background-color: #333333;
+  @include background-clip(padding-box);
+  font-family: 'Lato', Tahoma, sans-serif;
+}
 
+.header,
+.footer,
+.main {
+  width: 960px;
+  margin: 0 auto;
+}
 
+.header {
+  height: 45px;
+  margin-bottom: 25px;
+}
 
+.main {
+  background-color: $whiteGreen;
+  @include rounded(5px);
+  @include boxShadow(5px, 1px, 5px, 0.5);
 
+  .top {
+    background-color: $green;
+    @include borderRadius(5px, 5px, 0, 0);
+    padding: 5px;
+    -webkit-box-shadow: inset 1px 1px 1px lighten($green, 30%);
+    -moz-box-shadow: inset 1px 1px 1px lighten($green, 30%);
+    box-shadow: inset 1px 1px 1px lighten($green, 30%);
 
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #8AA740),
+        color-stop(0.94, #708A2F)
+    );
+    background-image: -o-linear-gradient(bottom, #8AA740 0%, #708A2F 94%);
+    background-image: -moz-linear-gradient(bottom, #8AA740 0%, #708A2F 94%);
+    background-image: -webkit-linear-gradient(bottom, #8AA740 0%, #708A2F 94%);
+    background-image: -ms-linear-gradient(bottom, #8AA740 0%, #708A2F 94%);
+    background-image: linear-gradient(to bottom, #8AA740 0%, #708A2F 94%);
+  }
+}
 
+ul.tab_links {
+  display: block;
 
+  li {
+    display: block;
+    float: left;
+    margin: 0 5px;
 
-
-
-
+    a {
+      color: lighten($green, 70%);
+      text-shadow: -1.5px -1.5px 2px $green;
+      @include background-clip(text);
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
+}
 
 
 
