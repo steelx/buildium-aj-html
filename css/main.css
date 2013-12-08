@@ -223,19 +223,80 @@ ul.tab_links {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px; }
+    .content .tabs_content .addButton {
+      display: block;
+      float: right;
+      color: #2c3f6c;
+      font-size: 14px;
+      line-height: 24px;
+      text-decoration: none;
+      padding: 0 15px;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border: 1px solid #5c702b;
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dcdee2), color-stop(1, white));
+      background-image: -o-linear-gradient(top, #dcdee2 0%, white 100%);
+      background-image: -moz-linear-gradient(top, #dcdee2 0%, white 100%);
+      background-image: -webkit-linear-gradient(top, #dcdee2 0%, white 100%);
+      background-image: -ms-linear-gradient(top, #dcdee2 0%, white 100%);
+      background-image: linear-gradient(to top, #dcdee2 0%, white 100%); }
     .content .tabs_content .col1 {
       width: 700px;
       margin: 5px; }
+      .content .tabs_content .col1 .topDiv {
+        padding: 5px; }
       .content .tabs_content .col1 .boxes {
         display: block;
-        overflow: hidden; }
+        overflow: hidden;
+        clear: both; }
         .content .tabs_content .col1 .boxes > li {
           display: block;
           float: left;
           width: 348px;
           height: 179px;
-          margin: 1px;
-          background: url("../img/tab_box_sprite.png"); }
+          margin: 5px 1px;
+          background: url("../img/tab_box_sprite.png");
+          padding: 8px 12px; }
+          .content .tabs_content .col1 .boxes > li .userpic {
+            width: 48px;
+            height: 48px;
+            float: left; }
+          .content .tabs_content .col1 .boxes > li .userdetail {
+            display: block;
+            float: left; }
+          .content .tabs_content .col1 .boxes > li .box_top {
+            overflow: hidden;
+            margin-bottom: 5px; }
+            .content .tabs_content .col1 .boxes > li .box_top time {
+              display: block;
+              float: left;
+              font-size: 14px;
+              line-height: 24px; }
+            .content .tabs_content .col1 .boxes > li .box_top ol {
+              display: block;
+              float: right;
+              overflow: hidden; }
+              .content .tabs_content .col1 .boxes > li .box_top ol li {
+                display: block;
+                float: left; }
+                .content .tabs_content .col1 .boxes > li .box_top ol li a {
+                  text-decoration: none;
+                  color: #2c3f6c;
+                  font-size: 14px;
+                  line-height: 24px;
+                  display: block; }
+            .content .tabs_content .col1 .boxes > li .box_top .moveout {
+              border-right: 1px solid #c1c2b6;
+              padding: 0 10px 0 20px;
+              background: url("../img/icons_sprite.png") no-repeat transparent -126px -30px; }
+            .content .tabs_content .col1 .boxes > li .box_top .delete {
+              height: 17px;
+              width: 17px;
+              margin: 4px 3px 3px 10px;
+              background: url("../img/icons_sprite.png") no-repeat transparent -37px -1px;
+              overflow: hidden;
+              text-indent: -999px; }
 
 /* ==========================================================================
    Media Queries

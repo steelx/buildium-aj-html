@@ -265,21 +265,103 @@ ul.tab_links {
     background-color: #f8faf6;
     @include rounded(5px);
 
+    .addButton {
+      display: block; float: right;
+      color: $inkBlue;
+      font-size: 14px;
+      line-height: 24px;
+      text-decoration: none;
+      padding: 0 15px;
+      @include rounded(5px);
+      border: 1px solid darken($green, 15%);
+      background-image: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(0, #DCDEE2),
+          color-stop(1, #FFFFFF)
+      );
+      background-image: -o-linear-gradient(top, #DCDEE2 0%, #FFFFFF 100%);
+      background-image: -moz-linear-gradient(top, #DCDEE2 0%, #FFFFFF 100%);
+      background-image: -webkit-linear-gradient(top, #DCDEE2 0%, #FFFFFF 100%);
+      background-image: -ms-linear-gradient(top, #DCDEE2 0%, #FFFFFF 100%);
+      background-image: linear-gradient(to top, #DCDEE2 0%, #FFFFFF 100%);
+    }
+
     .col1 {
       width: 700px;
       margin: 5px;
 
+      .topDiv {
+        padding: 5px;
+      }
+
       .boxes {
         display: block;
         overflow: hidden;
+        clear: both;
 
         > li {
           display: block;
           float: left;
           width: 348px;
           height: 179px;
-          margin: 1px;
+          margin: 5px 1px;
           background: url("../img/tab_box_sprite.png");
+
+          padding: 8px 12px;
+
+          .userpic {
+            width: 48px;
+            height: 48px;
+            float: left;
+          }
+          .userdetail {
+            display: block;
+            float: left;
+          }
+
+          .box_top {
+            overflow: hidden;
+            margin-bottom: 5px;
+
+            time {
+              display: block;
+              float: left;
+              font-size: 14px;
+              line-height: 24px;
+            }
+            ol {
+              display: block;
+              float: right;
+              overflow: hidden;
+              
+              li {
+                display: block;
+                float: left;
+                a {
+                  text-decoration: none;
+                  color: $inkBlue;
+                  font-size: 14px;
+                  line-height: 24px;
+                  display: block;
+                }
+              }
+            }
+            .moveout {
+              border-right: 1px solid #c1c2b6;
+              padding: 0 10px 0 20px;
+              background: url("../img/icons_sprite.png") no-repeat transparent -126px -30px;
+            }
+            .delete {
+              height: 17px;
+              width: 17px;
+              margin: 4px 3px 3px 10px;
+              background: url("../img/icons_sprite.png") no-repeat transparent -37px -1px;
+              overflow: hidden;
+              text-indent: -999px;
+            }
+          }
         }
       }
     }
