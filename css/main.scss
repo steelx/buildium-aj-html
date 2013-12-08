@@ -48,8 +48,13 @@ $green : #89a740;
    ========================================================================== */
 body, html {
   background-color: #333333;
-  @include background-clip(padding-box);
   font-family: 'Lato', Tahoma, sans-serif;
+}
+//removing padding effects
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .header,
@@ -57,11 +62,33 @@ body, html {
 .main {
   width: 960px;
   margin: 0 auto;
+  @include background-clip(border-box);
 }
 
+.footer {
+  padding: 15px;
+
+  .logo {
+    float: left;
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: url("../img/icons_spirte.png") no-repeat transparent 0 -53px;
+    overflow: hidden;
+    text-indent: -999px;
+  }
+}
 .header {
   height: 45px;
   margin-bottom: 25px;
+
+  h1 {
+    font-size: 24px;
+    line-height: 56px;
+    color: lighten($green, 50%);
+    text-shadow: -2px 1.5px 1px darken($green, 20%), 2px 1.5px 1px darken($green, 50%);
+    padding: 0 15px;
+  }
 }
 
 .main {
@@ -72,10 +99,11 @@ body, html {
   .top {
     background-color: $green;
     @include borderRadius(5px, 5px, 0, 0);
-    padding: 5px;
+    padding: 5px 0 0;
     -webkit-box-shadow: inset 1px 1px 1px lighten($green, 30%);
     -moz-box-shadow: inset 1px 1px 1px lighten($green, 30%);
     box-shadow: inset 1px 1px 1px lighten($green, 30%);
+    border-bottom: 1px solid darken($green, 15%);
 
     background-image: -webkit-gradient(
         linear,
@@ -98,21 +126,62 @@ ul.tab_links {
   li {
     display: block;
     float: left;
-    margin: 0 5px;
+    margin: 0;
+    position: relative;
 
     a {
-      color: lighten($green, 70%);
-      text-shadow: -1.5px -1.5px 2px $green;
+      font-size: 14px;
+      //line-height: 24px;
+      font-weight: bold;
+      color: darken($green, 90%);
+      text-shadow: -2px 1.5px 2px $green;
       @include background-clip(text);
       text-decoration: none;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: bold;
+      display: block;
+      padding: 10px 0 10px 20px;
+
+      &:hover,
+      &.selected {
+        color: lighten($green, 50%);
+        text-shadow: -2px 1.5px 1px darken($green, 10%);
+      }
+    }
+    .arrow {
+      display: block;
+      width: 9px;
+      height: 8px;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      z-index: 10;
+      background: url("../img/icons_spirte.png") no-repeat transparent -40px -19px;
     }
   }
 }
 
+.content {
+  margin: 15px 0 0;
+  padding: 10px 0;
 
+  h4.rental_infoline,
+  h2.heading {
+    margin: 15px;
+    color: darken($green, 90%);
+    text-shadow: -1px 1.5px 1px darken($whiteGreen, 10%);
+  }
+  h4.rental_infoline {
+    font-size: 15px;
+  }
+  h2.heading {
+    font-size: 28px;
+
+    span {
+      border-left: 1px solid #c1c2b6;
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+  }
+}
 
 
 /* ==========================================================================

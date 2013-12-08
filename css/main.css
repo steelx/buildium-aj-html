@@ -31,20 +31,42 @@ table {
    ========================================================================== */
 body, html {
   background-color: #333333;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   font-family: 'Lato', Tahoma, sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .header,
 .footer,
 .main {
   width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -moz-background-clip: border-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box; }
+
+.footer {
+  padding: 15px; }
+  .footer .logo {
+    float: left;
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: url("../img/icons_spirte.png") no-repeat transparent 0 -53px;
+    overflow: hidden;
+    text-indent: -999px; }
 
 .header {
   height: 45px;
   margin-bottom: 25px; }
+  .header h1 {
+    font-size: 24px;
+    line-height: 56px;
+    color: #f5f8ee;
+    text-shadow: -2px 1.5px 1px #4d5d24, 2px 1.5px 1px black;
+    padding: 0 15px; }
 
 .main {
   background-color: #edf2e9;
@@ -68,10 +90,11 @@ body, html {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 5px;
-    padding: 5px;
+    padding: 5px 0 0;
     -webkit-box-shadow: inset 1px 1px 1px #ccdca4;
     -moz-box-shadow: inset 1px 1px 1px #ccdca4;
     box-shadow: inset 1px 1px 1px #ccdca4;
+    border-bottom: 1px solid #5c702b;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8aa740), color-stop(0.94, #708a2f));
     background-image: -o-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
     background-image: -moz-linear-gradient(bottom, #8aa740 0%, #708a2f 94%);
@@ -84,17 +107,48 @@ ul.tab_links {
   ul.tab_links li {
     display: block;
     float: left;
-    margin: 0 5px; }
+    margin: 0;
+    position: relative; }
     ul.tab_links li a {
-      color: white;
-      text-shadow: -1.5px -1.5px 2px #89a740;
+      font-size: 14px;
+      font-weight: bold;
+      color: black;
+      text-shadow: -2px 1.5px 2px #89a740;
       -moz-background-clip: text;
       -webkit-background-clip: text;
       background-clip: text;
       text-decoration: none;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: bold; }
+      display: block;
+      padding: 10px 0 10px 20px; }
+      ul.tab_links li a:hover, ul.tab_links li a.selected {
+        color: #f5f8ee;
+        text-shadow: -2px 1.5px 1px #6b8232; }
+    ul.tab_links li .arrow {
+      display: block;
+      width: 9px;
+      height: 8px;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      z-index: 10;
+      background: url("../img/icons_spirte.png") no-repeat transparent -40px -19px; }
+
+.content {
+  margin: 15px 0 0;
+  padding: 10px 0; }
+  .content h4.rental_infoline,
+  .content h2.heading {
+    margin: 15px;
+    color: black;
+    text-shadow: -1px 1.5px 1px #d3dfc9; }
+  .content h4.rental_infoline {
+    font-size: 15px; }
+  .content h2.heading {
+    font-size: 28px; }
+    .content h2.heading span {
+      border-left: 1px solid #c1c2b6;
+      padding-left: 10px;
+      margin-left: 10px; }
 
 /* ==========================================================================
    Media Queries
