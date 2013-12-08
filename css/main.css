@@ -54,7 +54,7 @@ body, html {
     display: block;
     width: 140px;
     height: 40px;
-    background: url("../img/icons_spirte.png") no-repeat transparent 0 -53px;
+    background: url("../img/icons_sprite.png") no-repeat transparent 0 -53px;
     overflow: hidden;
     text-indent: -999px; }
 
@@ -123,19 +123,22 @@ ul.tab_links {
       ul.tab_links li a:hover, ul.tab_links li a.selected {
         color: #f5f8ee;
         text-shadow: -2px 1.5px 1px #6b8232; }
-    ul.tab_links li .arrow {
-      display: block;
-      width: 9px;
-      height: 8px;
-      position: absolute;
-      bottom: -7px;
-      left: 50%;
-      z-index: 10;
-      background: url("../img/icons_spirte.png") no-repeat transparent -40px -19px; }
+        ul.tab_links li a:hover .arrow, ul.tab_links li a.selected .arrow {
+          display: block;
+          width: 9px;
+          height: 8px;
+          position: absolute;
+          bottom: -7px;
+          left: 50%;
+          z-index: 10;
+          background: url("../img/icons_sprite.png") no-repeat transparent -40px -19px; }
 
 .content {
   margin: 15px 0 0;
-  padding: 10px 0; }
+  padding: 10px 0 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
   .content h4.rental_infoline,
   .content h2.heading {
     color: black;
@@ -156,7 +159,7 @@ ul.tab_links {
       top: 0;
       width: 88px;
       line-height: 28px;
-      background: url("../img/icons_spirte.png") no-repeat transparent -55px 0; }
+      background: url("../img/icons_sprite.png") no-repeat transparent -55px 0; }
   .content h2.heading {
     clear: both;
     font-size: 28px;
@@ -215,7 +218,24 @@ ul.tab_links {
               background-color: #edf2e9; }
   .content .tabs_content {
     display: none;
-    padding: 5px 0; }
+    padding: 5px 0;
+    background-color: #f8faf6;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+    .content .tabs_content .col1 {
+      width: 700px;
+      margin: 5px; }
+      .content .tabs_content .col1 .boxes {
+        display: block;
+        overflow: hidden; }
+        .content .tabs_content .col1 .boxes > li {
+          display: block;
+          float: left;
+          width: 348px;
+          height: 179px;
+          margin: 1px;
+          background: url("../img/tab_box_sprite.png"); }
 
 /* ==========================================================================
    Media Queries
