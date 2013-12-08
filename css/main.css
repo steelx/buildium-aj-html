@@ -138,17 +138,82 @@ ul.tab_links {
   padding: 10px 0; }
   .content h4.rental_infoline,
   .content h2.heading {
-    margin: 15px;
     color: black;
     text-shadow: -1px 1.5px 1px #d3dfc9; }
   .content h4.rental_infoline {
-    font-size: 15px; }
+    font-size: 15px;
+    margin: 0 15px;
+    display: block;
+    float: left;
+    position: relative;
+    line-height: 30px; }
+    .content h4.rental_infoline i {
+      padding: 0 0 0 35px;
+      font-size: 12px;
+      display: block;
+      position: absolute;
+      right: -96px;
+      top: 0;
+      width: 88px;
+      line-height: 28px;
+      background: url("../img/icons_spirte.png") no-repeat transparent -55px 0; }
   .content h2.heading {
-    font-size: 28px; }
+    clear: both;
+    font-size: 28px;
+    margin: 10px 15px 15px; }
     .content h2.heading span {
       border-left: 1px solid #c1c2b6;
       padding-left: 10px;
       margin-left: 10px; }
+  .content .tabs {
+    border-bottom: 1px solid #5c702b; }
+    .content .tabs ul {
+      display: block; }
+      .content .tabs ul li {
+        display: block;
+        float: left;
+        margin: 0 2px;
+        position: relative; }
+        .content .tabs ul li a {
+          display: block;
+          color: #2c3f6c;
+          font-size: 14px;
+          line-height: 24px;
+          padding: 0 10px;
+          text-decoration: none;
+          position: relative;
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.06, #e7ece4), color-stop(1, #f6faf1));
+          background-image: -o-linear-gradient(top, #e7ece4 6%, #f6faf1 100%);
+          background-image: -moz-linear-gradient(top, #e7ece4 6%, #f6faf1 100%);
+          background-image: -webkit-linear-gradient(top, #e7ece4 6%, #f6faf1 100%);
+          background-image: -ms-linear-gradient(top, #e7ece4 6%, #f6faf1 100%);
+          background-image: linear-gradient(to top, #e7ece4 6%, #f6faf1 100%);
+          border-top: 1px solid #5c702b;
+          border-left: 1px solid #5c702b;
+          border-right: 1px solid #5c702b;
+          -webkit-border-top-right-radius: 5px;
+          -webkit-border-bottom-right-radius: 0;
+          -webkit-border-bottom-left-radius: 0;
+          -webkit-border-top-left-radius: 5px;
+          -moz-border-radius-topright: 5px;
+          -moz-border-radius-bottomright: 0;
+          -moz-border-radius-bottomleft: 0;
+          -moz-border-radius-topleft: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 5px; }
+          .content .tabs ul li a.selected i {
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #edf2e9; }
+  .content .tabs_content {
+    display: none;
+    padding: 5px 0; }
 
 /* ==========================================================================
    Media Queries

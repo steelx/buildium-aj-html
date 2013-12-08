@@ -3,6 +3,7 @@
 
 $whiteGreen : #edf2e9;
 $green : #89a740;
+$inkBlue : #2c3f6c;
 
 @mixin background-clip($argument: padding-box) {
   -moz-background-clip: $argument;
@@ -165,21 +166,95 @@ ul.tab_links {
 
   h4.rental_infoline,
   h2.heading {
-    margin: 15px;
     color: darken($green, 90%);
     text-shadow: -1px 1.5px 1px darken($whiteGreen, 10%);
   }
   h4.rental_infoline {
     font-size: 15px;
+    margin: 0 15px;
+    display: block;
+    float: left;
+    position: relative;
+    line-height: 30px;
+
+    i {
+      padding: 0 0 0 35px;
+      font-size: 12px;
+      display: block;
+      position: absolute;
+      right: -96px;
+      top: 0;
+      width: 88px;
+      line-height: 28px;
+      background: url("../img/icons_spirte.png") no-repeat transparent -55px 0;
+    }
   }
   h2.heading {
+    clear: both;
     font-size: 28px;
-
+    margin: 10px 15px 15px;
     span {
       border-left: 1px solid #c1c2b6;
       padding-left: 10px;
       margin-left: 10px;
     }
+  }
+
+  .tabs {
+    border-bottom: 1px solid darken($green, 15%);
+    ul {
+      display: block;
+
+      li {
+        display: block;
+        float: left;
+        margin: 0 2px;
+        position: relative;
+
+        a {
+          display: block;
+          color: $inkBlue;
+          font-size: 14px;
+          line-height: 24px;
+          padding: 0 10px;
+          text-decoration: none;
+          position: relative;
+
+          background-image: -webkit-gradient(
+              linear,
+              left bottom,
+              left top,
+              color-stop(0.06, #E7ECE4),
+              color-stop(1, #F6FAF1)
+          );
+          background-image: -o-linear-gradient(top, #E7ECE4 6%, #F6FAF1 100%);
+          background-image: -moz-linear-gradient(top, #E7ECE4 6%, #F6FAF1 100%);
+          background-image: -webkit-linear-gradient(top, #E7ECE4 6%, #F6FAF1 100%);
+          background-image: -ms-linear-gradient(top, #E7ECE4 6%, #F6FAF1 100%);
+          background-image: linear-gradient(to top, #E7ECE4 6%, #F6FAF1 100%);
+
+          border-top: 1px solid darken($green, 15%);
+          border-left: 1px solid darken($green, 15%);
+          border-right: 1px solid darken($green, 15%);
+          @include borderRadius(5px, 5px, 0, 0);
+
+          &.selected i {
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $whiteGreen;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs_content {
+    display: none;
+    padding: 5px 0;
   }
 }
 
