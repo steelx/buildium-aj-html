@@ -12,5 +12,5 @@
         $hash.fadeIn(200);
         e.preventDefault();
     });
-    $('.tabs a.selected').trigger('click');
+
 })();

@@ -238,14 +238,18 @@ ul.tab_links {
           border-right: 1px solid darken($green, 15%);
           @include borderRadius(5px, 5px, 0, 0);
 
-          &.selected i {
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: $whiteGreen;
+          &.selected {
+            color: $green;
+
+            i {
+              display: block;
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: $whiteGreen;
+            }
           }
         }
       }

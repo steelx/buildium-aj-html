@@ -203,14 +203,16 @@ ul.tab_links {
           border-bottom-right-radius: 0;
           border-bottom-left-radius: 0;
           border-top-left-radius: 5px; }
-          .content .tabs ul li a.selected i {
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #edf2e9; }
+          .content .tabs ul li a.selected {
+            color: #89a740; }
+            .content .tabs ul li a.selected i {
+              display: block;
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #edf2e9; }
   .content .tabs_content {
     display: none;
     padding: 5px 0; }
